@@ -3,314 +3,404 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SideFlip - Página principal</title>
+    <title>Enermétrica – Gestión Energética Inteligente y Ciberseguridad Industrial</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Enermétrica: Soluciones de gestión energética inteligente y ciberseguridad industrial para medianas y grandes empresas. Integración vertical, datos locales y seguridad de grado militar.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/font-awesome.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
+
+    <!-- Preloader -->
     <div class="preloader-background">
-        <div class="preloader-wrapper big active">
-            <div class="spinner-layer spinner-blue">
-                <div class="circle-clipper left">
-                <div class="circle"></div>
-                </div>
-                <div class="gap-patch">
-                    <div class="circle"></div>
-                </div>
-                <div class="circle-clipper right">
-                    <div class="circle"></div>
-                </div>
-            </div>
+        <div class="preloader-content">
+            <div class="preloader-logo">&#9889;</div>
+            <div class="preloader-text">Enermétrica</div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
         </div>
     </div>
-    <div class="background-1" id="home">
-        <div class="fondo-1">
-            <div class="container header">
-                <div class="row">
-                    <div class="col s6 center-align" data-aos="fade-right">
-                            <h1 class="title-welcome">Lleva tus academias de baile a otro nivel con</h1>
-                            <span class="center-align">SideFlip</span>      
-                            <h2 class="see-more">Ver más</h2>
-                            <a href="#what-is"><span class="center-align"><i class="fa fa-chevron-down"></i></span></a>
-                    </div>
-                    <div class="col s6">
-                        <img class="img-women to-center" data-aos="fade-down" src="img/sd-1.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <nav>
+
+    <!-- Navbar -->
+    <nav class="ener-nav" id="navbar">
         <div class="nav-wrapper">
             <div class="container">
-                <a href="#!" class="brand-logo">SideFlip</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <a href="#home" class="brand-logo ener-logo">
+                    <span class="logo-icon">&#9889;</span> Enermétrica
+                </a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
                 <ul class="right hide-on-med-and-down">
-                    <li class=""><a href="#what-is">¿Qué es SideFlip?</a></li>
-                    <li class=""><a href="#services">Servicios</a></li>
-                    <li class=""><a href="#prices">Precios</a></li>
-                    <li class=""><a href="#clients" data-ancla="clients">Clientes</a></li>
-                    <li class=""><a href="#contact-us">Contacto</a></li>
-                    <li class=""><a href="#">Ingresar</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#differentiators">Tecnología</a></li>
+                    <li><a href="#prices">Planes</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#" class="nav-btn-login">Iniciar Sesión</a></li>
+                    <li><a href="#" class="nav-btn-register">Crear Cuenta</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!-- Mobile sidenav -->
     <ul class="sidenav" id="mobile-demo">
-        <li class=""><a href="#what-is">¿Qué es SideFlip?</a></li>
-        <li class=""><a href="#services">Servicios</a></li>
-        <li class=""><a href="#prices">Precios</a></li>
-        <li class=""><a href="#clients">Clientes</a></li>
-        <li class=""><a href="#contact-us">Contacto</a></li>
-        <li class=""><a href="#">Ingresar</a></li>
+        <li class="sidenav-header"><span>&#9889; Enermétrica</span></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#differentiators">Tecnología</a></li>
+        <li><a href="#prices">Planes</a></li>
+        <li><a href="#contact">Contacto</a></li>
+        <li><div class="divider"></div></li>
+        <li><a href="#">Iniciar Sesión</a></li>
+        <li><a href="#" class="sidenav-register">Crear Cuenta</a></li>
     </ul>
-    <div class="background-2" id="what-is">
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-circuit-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m10 offset-m1 l8 offset-l2 center-align">
+                        <div class="hero-badge">Gestión Energética &middot; Ciberseguridad Industrial</div>
+                        <h1 class="hero-title">
+                            Controla y Optimiza la Energía de tu Empresa con Seguridad Industrial
+                        </h1>
+                        <p class="hero-subtitle">
+                            Plataforma de integración vertical para monitoreo energético, cumplimiento normativo y protección cibernética en tiempo real.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn-hero-outline">
+                                <i class="fa fa-sign-in"></i> Iniciar Sesión
+                            </a>
+                            <a href="#" class="btn-hero-solid">
+                                <i class="fa fa-user-plus"></i> Crear Cuenta
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="stat-item">
+                            <span class="stat-number">99.9%</span>
+                            <span class="stat-label">Uptime garantizado</span>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="stat-item">
+                            <span class="stat-number">AES-256</span>
+                            <span class="stat-label">Cifrado de grado militar</span>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="stat-item">
+                            <span class="stat-number">ISO 27001</span>
+                            <span class="stat-label">Estándar de seguridad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
         <div class="container">
             <div class="row">
                 <div class="col s12 center-align">
-                    <h2 class="title-what-is"  data-aos="zoom-in">¿Qué es SideFlip?</h2>
-                    <div class="line-shape"></div>
-                    <br>
-                    <p class="text-sideflip">
-                        SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile, contamos con membresias para todos sus integrantes (Estudiantes, docentes y asesores).
-                        En esta aplicación los Asesores pueden programar una clase y los estudiantes la visualizan en tiempo real a través de su cuenta.
-                    </p>
-                    <br>
-                        <div class="main-center">
-                            <a class="btn see-more" href="#">Conoce más</a>
+                    <span class="section-tag">¿Quiénes Somos?</span>
+                    <h2 class="section-title">Ingeniería de Sistemas para la Gestión Energética Inteligente</h2>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+            <div class="row about-cards">
+                <div class="col s12 m4">
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fa fa-cogs"></i>
                         </div>
-                    <br>
-                    <br>
+                        <h3>Integración Vertical</h3>
+                        <p>Diseñamos y fabricamos nuestro propio hardware, garantizando compatibilidad total entre el equipo de campo y la plataforma de gestión. Sin intermediarios.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="about-card featured">
+                        <div class="about-card-icon">
+                            <i class="fa fa-shield"></i>
+                        </div>
+                        <h3>Ciberseguridad Aplicada</h3>
+                        <p>Especialistas en ingeniería de sistemas y ciberseguridad industrial, aplicando protocolos de seguridad de nivel empresarial al sector energético.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fa fa-database"></i>
+                        </div>
+                        <h3>Soberanía de Datos</h3>
+                        <p>Almacenamiento local privado en sus instalaciones. Sus datos nunca salen de su infraestructura, garantizando confidencialidad y control total.</p>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col s12">
-                        <h2 class="center-align">
-                            Conectate con nosotros a través de nuestras redes sociales <br>
-                            <br>
-                            <span class="fa fa-facebook-square hoverable"></span>
-                            <span class="fa fa-twitter-square hoverable"></span>
-                            <span class="fa fa-youtube-square hoverable"></span>
-                        </h2>         
+                <div class="col s12 center-align">
+                    <p class="about-description">
+                        Somos especialistas en ingeniería de sistemas y ciberseguridad aplicada al ahorro energético. Nuestra solución de integración vertical nos permite fabricar el hardware que conectamos directamente con nuestra plataforma inteligente, eliminando intermediarios y asegurando el máximo rendimiento. Priorizamos la <strong>soberanía de datos</strong> con almacenamiento local privado en sus propias instalaciones — sus datos permanecen bajo su control, siempre.
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="background-3" id="services">
-        <div class="fondo-3">
+    </section>
+
+    <!-- Technical Differentiators -->
+    <section class="diff-section" id="differentiators">
+        <div class="diff-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col s12 center-align">
-                        <h2 class="title-services"  data-aos="zoom-in">Servicios</h2>
-                        <div class="line-shape-2"></div>
-                        <br>
-                        <p class="text-services">
-                            SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile, contamos con membresias para todos sus integrantes (Estudiantes, docentes y asesores).
-                            En esta aplicación los Asesores pueden programar una clase y los estudiantes la visualizan en tiempo real a través de su cuenta.
-                        </p>
-                        <br>
-                        <div class="row row-services">
-                            <div class="col s4">
-                                <span class="fa fa-user-circle"></span>
-                                <h3>Docentes</h3>
-                                <p class="text-services">
-                                    SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile
-                                </p>
+                        <span class="section-tag light">Diferenciadores Técnicos</span>
+                        <h2 class="section-title light">Tecnología que Protege y Optimiza</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                </div>
+                <div class="row diff-grid">
+                    <div class="col s12 m6 l3">
+                        <div class="diff-card">
+                            <div class="diff-icon">
+                                <i class="fa fa-exchange"></i>
                             </div>
-                            <div class="col s4">
-                                <span class="fa fa-users"></span>
-                                <h3>Estudiantes</h3>
-                                <p class="text-services">
-                                    SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile
-                                </p>
-                            </div>
-                            <div class="col s4">
-                                <span class="fa fa-address-book"></span>
-                                <h3>Asesores</h3>
-                                <p class="text-services">
-                                    SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile
-                                </p>
-                            </div>   
+                            <h3>Control Remoto MQTT</h3>
+                            <p>Protocolo liviano de mensajería máquina-a-máquina para control en tiempo real con latencia mínima y alta eficiencia energética.</p>
                         </div>
-                        <div class="row row-services">
-                            <div class="col s4">
-                                <span class="fa fa-calendar"></span>
-                                <h3>Calendario dinámico</h3>
-                                <p class="text-services">
-                                    SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile
-                                </p>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="diff-card">
+                            <div class="diff-icon">
+                                <i class="fa fa-database"></i>
                             </div>
-                            <div class="col s4">
-                                <span class="fa fa-briefcase"></span>
-                                <h3>En tiempo real</h3>
-                                <p class="text-services">
-                                    SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile
-                                </p>
-                            </div>
-                            <div class="col s4">
-                                <span class="fa fa-comments"></span>
-                                <h3>Mensajería</h3>
-                                <p class="text-services">
-                                    SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile
-                                </p>
-                            </div> 
+                            <h3>Base de Datos MySQL Local</h3>
+                            <p>Almacenamiento en servidor local dentro de sus instalaciones. Sin nube externa, sin dependencias externas, con máximo control y privacidad.</p>
                         </div>
-                        <br>
-                        <br>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="diff-card">
+                            <div class="diff-icon">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                            <h3>Cifrado de Grado Militar</h3>
+                            <p>Cifrado AES-256 en todos los canales de comunicación, el mismo estándar utilizado por organismos gubernamentales y fuerzas armadas.</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3">
+                        <div class="diff-card">
+                            <div class="diff-icon">
+                                <i class="fa fa-shield"></i>
+                            </div>
+                            <h3>Conectividad VPN Segura</h3>
+                            <p>Túneles VPN cifrados para acceso remoto seguro. Administre su infraestructura energética desde cualquier lugar con total seguridad.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="background-2" id="prices">
-        <div class="container">
-            <div class="row center-align">
-                <div class="col s12">
-                    <h2 class="title-what-is"  data-aos="zoom-in">Precios</h2>
-                    <div class="line-shape"></div>
-                    <br>
-                    <p class="main-center text-sideflip">
-                        SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile, contamos con membresias para todos sus integrantes (Estudiantes, docentes y asesores).
-                        En esta aplicación los Asesores pueden programar una clase y los estudiantes la visualizan en tiempo real a través de su cuenta.
-                    </p>
-                    <br>
-                    <div class="row">     
-                        <div class="columns col s6">
-                            <ul class="price free">
-                                <li class="header-columns">Gratis</li>
-                                <li>$ 0.0 / año</li>
-                                <li>Agrega Estudiantes sin límites</li>
-                                <li>Máximo 3 docentes</li>
-                                <li>1 Asesor</li>
-                                <li>Hasta 3 categorias</li>
-                                <li>Hasta 5 clases por categoria a la semana</li>
-                            </ul>
-                        </div>
-                    
-                        <div class="columns col s6">
-                            <ul class="price premium">
-                                <li class="header-columns">Premium</li>
-                                <li>$ 50.000 / año</li>
-                                <li>Agrega Estudiantes sin límites</li>
-                                <li>Agrega docentes sin límites</li>
-                                <li>Asesores ilimitados</li>
-                                <li>Las categorias que quieras</li>
-                                <li>Las clases que quieras a la semana</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <div class="price-more-div center-align">
-                        <a class="price-more" href="#">Más información <i class="fa fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr>
-    <div class="background-2" id="clients">
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="prices">
         <div class="container">
             <div class="row">
                 <div class="col s12 center-align">
-                    <h2 class="title-what-is"  data-aos="zoom-in">Nuestros clientes</h2>
-                    <div class="line-shape"></div>
-                    <br>
-                    <p class="text-sideflip">
-                        SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile, contamos con membresias para todos sus integrantes (Estudiantes, docentes y asesores).
-                        En esta aplicación los Asesores pueden programar una clase y los estudiantes la visualizan en tiempo real a través de su cuenta.
-                    </p>
+                    <span class="section-tag">Planes y Precios</span>
+                    <h2 class="section-title">Soluciones a su Medida</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Elija el plan que se adapta a las necesidades de su empresa</p>
+                </div>
+            </div>
+            <div class="row pricing-cards">
+                <!-- Plan Empresa Mediana -->
+                <div class="col s12 m6">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <span class="plan-badge">Para Empresas Medianas</span>
+                            <h3 class="plan-name">Plan Empresa Mediana</h3>
+                            <p class="plan-tagline">Monitoreo y control eficiente de energía</p>
+                            <div class="plan-price">
+                                <div class="price-row">
+                                    <span class="price-label">Costo de activación</span>
+                                    <span class="price-value">$800 <span class="price-currency">MXN</span></span>
+                                </div>
+                                <div class="price-row highlight">
+                                    <span class="price-label">Suscripción mensual</span>
+                                    <span class="price-value">$2,000 <span class="price-currency">MXN/mes</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa fa-check"></i> Monitoreo energético en tiempo real</li>
+                            <li><i class="fa fa-check"></i> Control básico de cargas y circuitos</li>
+                            <li><i class="fa fa-check"></i> Panel de control web y móvil</li>
+                            <li><i class="fa fa-check"></i> Alertas y notificaciones automáticas</li>
+                            <li><i class="fa fa-check"></i> Reportes mensuales de consumo</li>
+                            <li><i class="fa fa-check"></i> Almacenamiento local de datos (MySQL)</li>
+                            <li><i class="fa fa-check"></i> Comunicación cifrada (MQTT + TLS)</li>
+                            <li><i class="fa fa-times muted"></i> Auditorías de ciberseguridad</li>
+                            <li><i class="fa fa-times muted"></i> Soporte técnico prioritario 24/7</li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="#contact" class="btn-plan-outline">Solicitar Información</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan Industrial / Corporativo -->
+                <div class="col s12 m6">
+                    <div class="pricing-card featured-plan">
+                        <div class="plan-popular-badge">Más Completo</div>
+                        <div class="pricing-header">
+                            <span class="plan-badge">Para Grandes Empresas</span>
+                            <h3 class="plan-name">Plan Industrial / Corporativo</h3>
+                            <p class="plan-tagline">Cumplimiento del Código de Red y gestión de demanda máxima</p>
+                            <div class="plan-price">
+                                <div class="price-row">
+                                    <span class="price-label">Costo de activación</span>
+                                    <span class="price-value">$800 <span class="price-currency">MXN</span></span>
+                                </div>
+                                <div class="price-row highlight">
+                                    <span class="price-label">Suscripción mensual</span>
+                                    <span class="price-value">$2,000 <span class="price-currency">MXN/mes</span></span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="plan-features">
+                            <li><i class="fa fa-check"></i> Todo lo del Plan Empresa Mediana</li>
+                            <li><i class="fa fa-check"></i> Cumplimiento del Código de Red CFE</li>
+                            <li><i class="fa fa-check"></i> Gestión de demanda máxima (hora punta)</li>
+                            <li><i class="fa fa-check"></i> Análisis de armónicos y calidad de energía</li>
+                            <li><i class="fa fa-check"></i> Conectividad VPN corporativa segura</li>
+                            <li><i class="fa fa-check"></i> Cifrado AES-256 de grado militar</li>
+                            <li><i class="fa fa-check"></i><strong> Auditorías de ciberseguridad incluidas</strong></li>
+                            <li><i class="fa fa-check"></i><strong> Soporte técnico prioritario 24/7</strong></li>
+                        </ul>
+                        <div class="plan-cta">
+                            <a href="#contact" class="btn-plan-solid">Solicitar Demo</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container-grid">
-            <div class="item-grid">
-                <img src="img/clients/logogolden.png" alt="">
-            </div>
-            <div class="item-grid black">
-                <img src="http://www.danceinmotion.co/images/logo_dance.svg" alt="">
-            </div>
-            <div class="item-grid">
-                <img src="img/clients/logogolden.png" alt="">
-            </div>
-            <div class="item-grid black">
-                <img src="http://www.danceinmotion.co/images/logo_dance.svg" alt="">
-            </div>
-            <div class="item-grid">
-                <img src="img/clients/logogolden.png" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="background-4" id="contact-us">
-        <div class="fondo-4">
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="contact-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col s12 center-align">
-                        <h2 class="title-services main-center"  data-aos="zoom-in">Contáctenos</h2>
-                        <div class="line-shape-2"></div>
-                        <br>
-                        <p class="text-services">
-                            SideFlip es la plataforma ideal para gestionar la asistencia a clases en cada una de sus academias de baile, contamos con membresias para todos sus integrantes (Estudiantes, docentes y asesores).
-                            En esta aplicación los Asesores pueden programar una clase y los estudiantes la visualizan en tiempo real a través de su cuenta.
+                        <span class="section-tag light">Contáctenos</span>
+                        <h2 class="section-title light">Inicie su Transformación Energética</h2>
+                        <div class="section-divider"></div>
+                        <p class="contact-subtitle">
+                            Nuestros especialistas están listos para analizar su caso y proponer la solución óptima para su empresa.
                         </p>
-                        <br>   
                     </div>
                 </div>
                 <div class="row">
-                    <form class="col s12" action="" method="POST">
-                        <div class="row">
-                            <div class="input-field col s6">
-                                <input type="text" name="txt_subject" id="txt_subject" required placeholder="Asunto" class="validate">
-                                <label for="txt_subject">Asunto</label>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <form class="contact-form" action="" method="POST">
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <i class="material-icons prefix">person</i>
+                                    <input type="text" name="txt_name" id="txt_name" required class="validate">
+                                    <label for="txt_name">Nombre completo</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <i class="material-icons prefix">business</i>
+                                    <input type="text" name="txt_company" id="txt_company" class="validate">
+                                    <label for="txt_company">Empresa</label>
+                                </div>
                             </div>
-                            <div class="input-field col s6">
-                                <input type="email" name="txt_email" id="txt_email" required placeholder="Correo electrónico" class="validate">
-                                <label for="txt_email">Correo electrónico</label>
+                            <div class="row">
+                                <div class="input-field col s12 m6">
+                                    <i class="material-icons prefix">email</i>
+                                    <input type="email" name="txt_email" id="txt_email" required class="validate">
+                                    <label for="txt_email">Correo electrónico</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <i class="material-icons prefix">phone</i>
+                                    <input type="tel" name="txt_phone" id="txt_phone" class="validate">
+                                    <label for="txt_phone">Teléfono</label>
+                                </div>
                             </div>
-                        </div>   
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <textarea name="txt_comments" id="txt_comments" cols="30" rows="10" class="materialize-textarea" placeholder="Escribe tu texto aqui.."></textarea>
-                                <label for="txt_comments">Mensaje</label>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">message</i>
+                                    <textarea name="txt_message" id="txt_message" class="materialize-textarea"></textarea>
+                                    <label for="txt_message">Cuéntenos sobre su proyecto o necesidad energética</label>
+                                </div>
                             </div>
-                        </div>
-                        <div class="center-align">
-                            <button type="submit" class="btn send-form">Enviar</button>
-                        </div>                  
-                    </form>  
+                            <div class="center-align">
+                                <button type="submit" class="btn-submit">
+                                    <i class="fa fa-paper-plane"></i> Enviar Mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <footer class="page-footer center-align">
+    </section>
+
+    <!-- Footer -->
+    <footer class="ener-footer">
         <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-               <h2>SideFlip</h2>
+            <div class="row footer-top">
+                <div class="col s12 m4">
+                    <div class="footer-brand">
+                        <span class="footer-logo">&#9889; Enermétrica</span>
+                        <p class="footer-tagline">Gestión Energética Inteligente y Ciberseguridad Industrial para medianas y grandes empresas.</p>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <h5 class="footer-heading">Navegación</h5>
+                    <ul class="footer-links">
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#differentiators">Tecnología</a></li>
+                        <li><a href="#prices">Planes</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col s12 m4">
+                    <h5 class="footer-heading">Contacto</h5>
+                    <div class="footer-contact">
+                        <p><i class="fa fa-map-marker"></i> La Paz, Baja California Sur, México</p>
+                        <p><i class="fa fa-envelope"></i> contacto@volenergica.mx</p>
+                        <p><i class="fa fa-phone"></i> +52 (612) 123-4567</p>
+                    </div>
+                </div>
             </div>
-            <div class="col l4 offset-l2 s12">
-              <p>Lleva tu Academia a otro nivel</p>
-              <span class="fa fa-facebook-square"></span>
-              <span class="fa fa-twitter-square"></span>
-              <span class="fa fa-youtube-square"></span>
-            </div>
-          </div>
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-          &copy; 2018 Copyright
-          | Todos los derechos reservados
-          </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <p>&copy; 2024 Enermétrica &middot; Todos los derechos reservados &middot; La Paz, Baja California Sur</p>
+                        <p class="footer-disclaimer">Soluciones de gestión energética inteligente con almacenamiento local de datos y ciberseguridad de grado industrial.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>
